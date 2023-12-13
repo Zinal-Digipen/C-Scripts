@@ -1,7 +1,7 @@
 /*
 Zinal
 10/25/2023
-calc area of triangle from base and height
+calculate area of right triangle from base and height
 */
 
 //includes
