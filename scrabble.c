@@ -1,7 +1,7 @@
 /*
 zinal granville
 11/16/23
-scrabble
+little scrabble game that asserts point to letters in the alphabet 
 */
 
 #include <ctype.h>
