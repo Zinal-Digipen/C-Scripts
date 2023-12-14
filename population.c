@@ -8,15 +8,15 @@ population calculator based off of start and end population
 #include <cs50.h>
 #include <stdio.h>
 
-// declare variables
-int start;
-int end;
-float years = ;
-
 // main
 int main(void)
 {
-    // ask user for start and ending population
+    // ask user for  start and ending values
+    // declare variables
+    int start;
+    int end;
+    int years = 0;
+
     do
     {
         start = get_int("Starting Population: ");
@@ -28,30 +28,15 @@ int main(void)
         end = get_int("ending Population: ");
     }
     while (end <= start);
-}
 
-// calculate days until
+    while (start < end)
+    {
+        float a_res1 = start / 3; // 400 (result for 1200)
+        float a_res2 = start / 4; // 300 (result for 1200)
+        start += a_res1 - a_res2;
+        years++;
+    }
 
-int calculate(void)
-{
-    int start_div_gain = start / 3;
-    int start_div_loss = start / 4;
-    years = (start / 3 + start / 4);
-    printf(" population will be reached in %g years\n", years);
-
+    printf("Years: %d\n", years);
     return 0;
 }
-
-// calculate numerical difference in population
-
-int calculate_difference(void)
-{
-    int a = 1200;
-    int a_res1 = a / 3; //400
-    int a_res2 = a / 4; //300
-    int b = 1300;
-    int years = a_res1 - a_res2;
-    printf("population will be reached in %i years\n", years / 100);
-    return 0;
-}
-
